@@ -2,7 +2,11 @@
 <html>
 <head>
 <script>
-var ret = cpf.request ('["digitalwrite", 3, "LOW"]');
+setup();
+	function setup(){
+		if(cpf)
+			var ret = cpf.setPinMode('["resetPin"],["setPinMode", "digital", 3, "OUTPUT"]'); 
+	}
 function myFunction1(){
     cpf.set("white led", 1);
     document.getElementById("demo").innerHTML="開燈了！";
@@ -19,7 +23,7 @@ function myFunction2(){
 
 <h1>CPF bulder test</h1>
 
-<p id="demo">電燈狀態</p>
+<p id="demo">電燈狀態一</p>
 
 <button type="button" onclick="myFunction1()">開燈</button>
 <button type="button" onclick="myFunction2()">關燈</button>
