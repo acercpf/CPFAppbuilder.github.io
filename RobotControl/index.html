@@ -9,12 +9,12 @@ setup();
 			var ret = cpf.setPinMode('["resetPin"],["setPinMode", "digital", 4, "OUTPUT"]'); 
 	}
 function myFunction1(){
-    //cpf.set("socket d4", 1);
+    cpf.set("socket d4", 1);
     cpf.request ('["digitalwrite", 4, 1]');
     document.getElementById("demo").innerHTML="開燈了！";
 }
 function myFunction2(){
-    //cpf.set("socket d4", 0);
+    cpf.set("socket d4", 0);
     cpf.request ('["digitalwrite", 4, 0]');
     document.getElementById("demo").innerHTML="關燈了！";
 }
