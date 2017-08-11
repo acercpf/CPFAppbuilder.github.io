@@ -3,28 +3,19 @@
 <head>
 <script>
 setup();
-var lighton = document.getElementById("lighton");
-var lightoff = document.getElementById("lightoff");
+
 	function setup(){
 		if(cpf)
-			var ret = cpf.setPinMode('["resetPin"],["setPinMode", "digital", 3, "OUTPUT"]'); 
+			var ret = cpf.setPinMode('["resetPin"],["setPinMode", "digital", 2, "OUTPUT"]'); 
 	}
 function myFunction1(){
-    cpf.set("socket d3", 1);
+    cpf.set("socket d2", 1);
     document.getElementById("demo").innerHTML="開燈了！";
 }
 function myFunction2(){
     cpf.set("socket d2", 0);
     document.getElementById("demo").innerHTML="關燈了！";
 }
-
-	lighton.addEventListener('touchstart', function(event) {
-		cpf.set("socket d2", 1);
-	});
-	// LED關燈
-	lightoff.addEventListener('touchstart', function(event) {
-		cpf.set("socket d2", 0);
-	});
 
 </script>
 </head>
