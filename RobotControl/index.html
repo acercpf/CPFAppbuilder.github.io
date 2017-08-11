@@ -2,10 +2,15 @@
 <html>
 <head>
 <script>
-function myFunction()
-{
-document.getElementById("demo").innerHTML="我的天！你還真的打！";
+function myFunction1(){
+    var ret = cpf.request('["digitalWrite", 3, 1]'); 
+    document.getElementById("demo").innerHTML="開燈了！";
 }
+function myFunction2(){
+    var ret = cpf.request('["digitalWrite", 3, 0]'); 
+    document.getElementById("demo").innerHTML="關燈了！";
+}
+
 </script>
 </head>
 
@@ -15,7 +20,7 @@ document.getElementById("demo").innerHTML="我的天！你還真的打！";
 
 <p id="demo">我站在這裡打我啊</p>
 
-<button type="button" onclick="myFunction()">打他吧！</button>
-
+<button type="button" onclick="myFunction1()">開燈</button>
+<button type="button" onclick="myFunction2()">關燈</button>
 </body>
 </html>
