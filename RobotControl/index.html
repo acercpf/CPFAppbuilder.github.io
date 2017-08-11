@@ -37,6 +37,12 @@ setup();
         function myFunction3(){
         cpf.set("socket d5", 0);
         cpf.request ('["servo_pos", 5, 0]');
+        cpf.set("socket d6", 0);
+        cpf.request ('["servo_pos", 6, 0]');
+        cpf.set("socket d5", 180);
+        cpf.request ('["servo_pos", 5, 180]');
+        cpf.set("socket d6", 180);
+        cpf.request ('["servo_pos", 6, 180]');
         document.getElementById("demo").innerHTML="向前進";
     }
         function myFunction4(){
