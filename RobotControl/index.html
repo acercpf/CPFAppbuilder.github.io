@@ -3,6 +3,8 @@
 <head>
 <script>
 setup();
+var lighton = document.getElementById("lighton");
+var lightoff = document.getElementById("lightoff");
 	function setup(){
 		if(cpf)
 			var ret = cpf.setPinMode('["resetPin"],["setPinMode", "digital", 3, "OUTPUT"]'); 
@@ -16,6 +18,14 @@ function myFunction2(){
     document.getElementById("demo").innerHTML="關燈了！";
 }
 
+	lighton.addEventListener('touchstart', function(event) {
+		cpf.set("socket d2", 1);
+	});
+	// LED關燈
+	lightoff.addEventListener('touchstart', function(event) {
+		cpf.set("socket d2", 0);
+	});
+
 </script>
 </head>
 
@@ -25,7 +35,7 @@ function myFunction2(){
 
 <p id="demo">電燈狀態一</p>
 
-<button type="button" onclick="myFunction1()">開燈</button>
-<button type="button" onclick="myFunction2()">關燈</button>
+<button type="button" id="lighton" onclick="myFunction1()">開燈</button>
+<button type="button" id="lightoff" onclick="myFunction2()">關燈</button>
 </body>
 </html>
