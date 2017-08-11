@@ -2,12 +2,13 @@
 <html>
 <head>
 <script>
+var ret = cpf.request('["digitalWrite", 3, 1]'); 
 function myFunction1(){
-    var ret = cpf.request('["digitalWrite", 3, 1]'); 
+    cpf.set("white led", 1);
     document.getElementById("demo").innerHTML="開燈了！";
 }
 function myFunction2(){
-    var ret = cpf.request('["digitalWrite", 3, 0]'); 
+    cpf.set("white led", 0);
     document.getElementById("demo").innerHTML="關燈了！";
 }
 
