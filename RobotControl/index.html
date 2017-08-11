@@ -10,10 +10,12 @@ setup();
 	}
 function myFunction1(){
     cpf.set("socket d2", 1);
+    var ret = cpf.request ('["digitalwrite", 2, 1]');
     document.getElementById("demo").innerHTML="開燈了！";
 }
 function myFunction2(){
     cpf.set("socket d2", 0);
+    var ret = cpf.request ('["digitalwrite", 2, 0]');
     document.getElementById("demo").innerHTML="關燈了！";
 }
 
