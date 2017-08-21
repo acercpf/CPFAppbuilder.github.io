@@ -22,7 +22,7 @@ setup();
 
 	function setup(){
 		if(cpf)
-			var ret = cpf.setPinMode('["resetPin"],["setPinMode", "digital", 4, "OUTPUT"],["setPinMode", "digital", 5, "SERVO"],["setPinMode", "digital", 6, "SERVO"]'); 
+			var ret = cpf.setPinMode('["resetPin"],["setPinMode", "digital", 4, "OUTPUT"],["setPinMode", "digital", 5, "SERVO"],["setPinMode", "digital", 6, "SERVO"],["setPinMode", "digital", 8, "SERVO"],["setPinMode", "digital", 9, "SERVO"],["setPinMode", "digital", 10, "SERVO"],["setPinMode", "digital", 11, "SERVO"]'); 
 	}
     function myFunction1(){
         cpf.set("socket d4", 1);
@@ -37,11 +37,19 @@ setup();
         function myFunction3(){
         cpf.set("socket d5", 0);
         cpf.set("socket d6", 180);
-        cpf.request ('["servo_pos", 5, 0],["servo_pos", 6, 180]');
+        cpf.set("socket d8", 0);
+        cpf.set("socket d9", 180);
+        cpf.set("socket d10", 0);
+        cpf.set("socket d11", 180);
+        cpf.request ('["servo_pos", 5, 0],["servo_pos", 6, 180],["servo_pos", 8, 0],["servo_pos", 9, 180],["servo_pos", 10, 0],["servo_pos", 11, 180]');
         cpf.set("socket d5", 180);
-        cpf.set("socket d6", 0);  
-        cpf.request ('["servo_pos", 5, 180],["servo_pos", 6, 0]');
-        document.getElementById("demo").innerHTML="向前進1";
+        cpf.set("socket d6", 0);
+        cpf.set("socket d8", 180);
+        cpf.set("socket d9", 0);
+        cpf.set("socket d10",180);
+        cpf.set("socket d11",0);  
+        cpf.request ('["servo_pos", 5, 180],["servo_pos", 6, 0],["servo_pos", 8, 180],["servo_pos", 9, 0],["servo_pos", 10, 180],["servo_pos", 11, 0]');
+        document.getElementById("demo").innerHTML="舉手";
     }
         function myFunction4(){
         cpf.set("socket d5", 180);
