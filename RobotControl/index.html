@@ -38,13 +38,13 @@ setup();
 
         cpf.set("socket d10", 0);
         cpf.set("socket d11", 180);
-        cpf.request ('["servo_pos", 5, 0],["servo_pos", 6, 180]');
+        cpf.request ('["servo_pos", 10, 0],["servo_pos", 11, 180]');
         document.getElementById("demo").innerHTML="舉起手";
     }
         function myFunction4(){
         cpf.set("socket d10", 180);
         cpf.set("socket d11", 0);
-        cpf.request ('["servo_pos", 5, 180],["servo_pos", 6, 0]');
+        cpf.request ('["servo_pos", 10, 180],["servo_pos", 11, 0]');
         document.getElementById("demo").innerHTML="放下手";
     }
         function myFunction5(){
