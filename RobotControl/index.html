@@ -48,14 +48,14 @@ setup();
         document.getElementById("demo").innerHTML="舉起手";
     }
         function myFunction5(){
-        cpf.set("socket d6", 0);
-        cpf.request ('["servo_pos", 6, 0]');
-        document.getElementById("demo").innerHTML="向左轉";
+        cpf.set("socket d5", 60);
+        cpf.set("socket d6", 120);
+        cpf.request ('["servo_pos", 5, 60],["servo_pos", 6, 120]');
     }
         function myFunction6(){
-        cpf.set("socket d6", 180);
-        cpf.request ('["servo_pos", 6, 180]');
-        document.getElementById("demo").innerHTML="向右轉";
+        cpf.set("socket d5", 120);
+        cpf.set("socket d6", 60);
+        cpf.request ('["servo_pos", 5, 120],["servo_pos", 6, 60]');
     }
 </script>
 </html>
