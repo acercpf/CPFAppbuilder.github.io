@@ -10,8 +10,8 @@
 <p id="demo">狀態</p>
 <button type="button" id="lighton" onclick="myFunction1()">開燈</button>
 <button type="button" id="lightoff" onclick="myFunction2()">關燈</button>
-<button type="button" id="up" onclick="myFunction3()">向上</button>
-<button type="button" id="down" onclick="myFunction4()">向下</button>
+<button type="button" id="up" onclick="myFunction3()">舉起手</button>
+<button type="button" id="down" onclick="myFunction4()">放下手</button>
 <button type="button" id="left" onclick="myFunction5()">向左</button>
 <button type="button" id="right" onclick="myFunction6()">向右</button>
 
@@ -35,26 +35,17 @@ setup();
         document.getElementById("demo").innerHTML="關燈了！";
     }
         function myFunction3(){
-        cpf.set("socket d5", 90);
-        cpf.set("socket d6", 180);
-        cpf.set("socket d8", 90);
-        cpf.set("socket d9", 180);
-        cpf.set("socket d10", 90);
+
+        cpf.set("socket d10", 0);
         cpf.set("socket d11", 180);
-        cpf.request ('["servo_pos", 5, 90],["servo_pos", 6, 180],["servo_pos", 8, 90],["servo_pos", 9, 180],["servo_pos", 10, 90],["servo_pos", 11, 180]');
-        cpf.set("socket d5", 180);
-        cpf.set("socket d6", 90);
-        cpf.set("socket d8", 180);
-        cpf.set("socket d9", 90);
-        cpf.set("socket d10",180);
-        cpf.set("socket d11",90);  
-        cpf.request ('["servo_pos", 5, 180],["servo_pos", 6, 90],["servo_pos", 8, 180],["servo_pos", 9, 90],["servo_pos", 10, 180],["servo_pos", 11, 90]');
-        document.getElementById("demo").innerHTML="舉手";
+        cpf.request ('["servo_pos", 5, 0],["servo_pos", 6, 180]');
+        document.getElementById("demo").innerHTML="舉起手";
     }
         function myFunction4(){
-        cpf.set("socket d5", 180);
-        cpf.request ('["servo_pos", 5, 180]');ㄅ 
-        document.getElementById("demo").innerHTML="向後退";
+        cpf.set("socket d10", 180);
+        cpf.set("socket d11", 0);
+        cpf.request ('["servo_pos", 5, 180],["servo_pos", 6, 0]');
+        document.getElementById("demo").innerHTML="放下手";
     }
         function myFunction5(){
         cpf.set("socket d6", 0);
