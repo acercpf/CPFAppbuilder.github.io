@@ -8,6 +8,7 @@
 
 
 <p id="demo">狀態</p>
+<button type="button" id="Correction" onclick="myFunction7()">校正</button>
 <button type="button" id="up" onclick="myFunction3()">放下手</button>
 <button type="button" id="down" onclick="myFunction4()">舉起手</button>
 <button type="button" id="left" onclick="myFunction5()">放平</button>
@@ -35,14 +36,14 @@ setup();
         function myFunction3(){
 
         cpf.set("socket d10", 0);
-        cpf.set("socket d11", 180);
-        cpf.request ('["servo_pos", 10, 0],["servo_pos", 11, 180]');
+        cpf.set("socket d11", 90);
+        cpf.request ('["servo_pos", 10, 0],["servo_pos", 11, 90]');
         document.getElementById("demo").innerHTML="放下手";
     }
         function myFunction4(){
-        cpf.set("socket d10", 180);
+        cpf.set("socket d10", 90);
         cpf.set("socket d11", 0);
-        cpf.request ('["servo_pos", 10, 180],["servo_pos", 11, 0]');
+        cpf.request ('["servo_pos", 10, 90],["servo_pos", 11, 0]');
         document.getElementById("demo").innerHTML="舉起手";
     }
         function myFunction5(){
@@ -56,6 +57,19 @@ setup();
         cpf.set("socket d6", 60);
         cpf.request ('["servo_pos", 5, 120],["servo_pos", 6, 60]');
         document.getElementById("demo").innerHTML="顛腳尖";
+    }
+        function myFunction7(){
+        cpf.set("socket d10", 90);
+        cpf.set("socket d11", 0);
+        cpf.set("socket d5", 120);
+        cpf.set("socket d6", 60);
+        cpf.request ('["servo_pos", 10, 90],["servo_pos", 11, 0],["servo_pos", 5, 120],["servo_pos", 6, 60]');
+        cpf.set("socket d10", 0);
+        cpf.set("socket d11", 90);
+        cpf.set("socket d5", 60);
+        cpf.set("socket d6", 120);
+        cpf.request ('["servo_pos", 10, 0],["servo_pos", 11, 90],["servo_pos", 5, 60],["servo_pos", 6, 120]');
+        document.getElementById("demo").innerHTML="校正";
     }
 </script>
 </html>
