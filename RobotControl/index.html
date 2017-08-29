@@ -6,7 +6,7 @@
 
 <body>
 
-
+<h1>雲教授OTTO機器人</h1>
 <p id="demo">狀態</p>
 <button type="button" id="Correction" onclick="myFunction7()">校正</button><br/>
 <button type="button" id="up" onclick="myFunction3()">放下手</button>
@@ -62,7 +62,7 @@ setup();
         cpf.set("socket d10", 90);
         cpf.set("socket d11", 0);
         cpf.set("socket d5", 120);
-        cpf.set("socket d6", 60);
+        cpf.set("socket d6", 60); 
         cpf.request ('["servo_pos", 10, 90],["servo_pos", 11, 0],["servo_pos", 5, 120],["servo_pos", 6, 60]');
         cpf.set("socket d10", 0);
         cpf.set("socket d11", 90);
@@ -72,5 +72,9 @@ setup();
         document.getElementById("demo").innerHTML="校正";
     }
 </script>
+
+<style>
+    h1{font-family: "Times New Roman", Times, serif;color:#3366cc;}
+</style>
 </html>
 
