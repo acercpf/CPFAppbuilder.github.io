@@ -8,11 +8,11 @@
 
 <h1>雲教授OTTO機器人</h1>
 <p id="demo">狀態</p>
-<button type="button" id="Correction" onclick="myFunction7()">校正</button><br/>
-<button class="button" type="button" id="up" onclick="myFunction3()">放下手</button>
-<button class="button" type="button" id="down" onclick="myFunction4()">舉起手</button><br/>
-<button class="button" type="button" id="left" onclick="myFunction5()">單腳站</button>
-<button class="button" type="button" id="right" onclick="myFunction6()">顛腳尖</button>
+<button class="button_correction" type="button" id="Correction" onclick="myFunction7()">校正</button><br/>
+<button class="button_hand" type="button" id="up" onclick="myFunction3()">放下手</button>
+<button class="button_hand" type="button" id="down" onclick="myFunction4()">舉起手</button><br/>
+<button class="button_foot" type="button" id="left" onclick="myFunction5()">單腳站</button>
+<button class="button_foot" type="button" id="right" onclick="myFunction6()">顛腳尖</button>
 
 </body>
 
@@ -75,7 +75,27 @@ setup();
 
 <style>
     h1{font-family: "Times New Roman", Times, serif;color:#3366cc;}
-    .button {
+    .button_correction {
+    background-color: #FF0088; /* Pink */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    }
+    .button_hand {
+    background-color: #FFFF00; /* Yellow */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    }
+    .button_foot {
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
