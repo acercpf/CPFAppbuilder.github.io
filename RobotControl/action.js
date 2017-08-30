@@ -58,9 +58,8 @@ function myFunction7(){
 }
 function ButtonPressed(){
     cpf.set("socket d10", 180);
-    cpf.request ('["servo_pos", 10, 180]');
     cpf.set("socket d10", 0);
-    cpf.request ('["servo_pos", 10, 0]');
+    cpf.request ('["servo_pos", 10, 0],["servo_pos", 10, 180]');
 }
 function CancelEvent(e) {
 
