@@ -56,3 +56,6 @@ function myFunction7(){
     cpf.request ('["servo_pos", 10, 0],["servo_pos", 11, 90],["servo_pos", 5, 60],["servo_pos", 6, 120]');
     
 }
+function CancelEvent(e) {
+  e.preventDefault();
+}
