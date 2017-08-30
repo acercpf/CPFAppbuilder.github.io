@@ -1,3 +1,17 @@
+body {
+margin-top: 0px;
+margin-right: 0px;
+margin-bottom: 0px;
+margin-left: 0px;
+}
+#container{
+height:100%;
+margin-top:0px;
+background: -webkit-linear-gradient(purple,blue);
+background: -o-linear-gradient(purple,blue);
+background: -moz-linear-gradient(purple,blue);
+background: linear-gradient(purple,blue);
+}
 h1 { 
     font-family: "Times New Roman", Times, serif;
     color:#3366cc;
