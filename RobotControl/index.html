@@ -7,22 +7,36 @@
 
 <body>
     
-<h2><p id="demo">狀態</p></h2>
-
-<div>
-<button class="button_correction" type="button" id="Correction" onclick="myFunction7()">校正</button><br/>
-</div>
-
-<div>
-<button class="button_hand" type="button" id="up" onclick="myFunction3()">放下手</button>
-<button class="button_hand" type="button" id="down" onclick="myFunction4()">舉起手</button><br/>
-</div>
-
-<div>
-<button class="button_foot" type="button" id="left" onclick="myFunction5()">單腳站</button>
-<button class="button_foot" type="button" id="right" onclick="myFunction6()">顛腳尖</button>
-</div>
-
+    
+    <h2><p id="demo">狀態</p></h2>
+    
+    <div>
+        <button class="button_correction" type="button" id="Correction" onclick="myFunction7()">校正</button><br/>
+    </div>
+    
+    <div>
+        <button class="button_hand" type="button" id="up" onclick="myFunction3()">放下手</button>
+        <button class="button_hand" type="button" id="down" onclick="myFunction4()">舉起手</button><br/>
+    </div>
+    
+    <div>
+        <button class="button_foot" type="button" id="left" onclick="myFunction5()">單腳站</button>
+        <button class="button_foot" type="button" id="right" onclick="myFunction6()">顛腳尖</button>
+    </div>
+    
+    <input type="button" value="test"
+    onmousedown   ="ButtonPressed(this);"
+    ontouchstart  ="ButtonPressed(this);"
+    
+    onmouseup     ="ButtonReleased(this);"
+    onmouseout    ="ButtonReleased(this);"
+    ontouchend    ="ButtonReleased(this);"
+    ontouchcancel ="ButtonReleased(this);"
+    
+    ontouchmove   ="CancelEvent(event);"
+    />
+    
+    
 </body>
 <script>
     setup();
