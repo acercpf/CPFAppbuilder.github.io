@@ -1,19 +1,8 @@
 function setup(){
     if(cpf)
-        var ret = cpf.setPinMode('["resetPin"],["setPinMode", "digital", 4, "OUTPUT"],["setPinMode", "digital", 5, "SERVO"],["setPinMode", "digital", 6, "SERVO"],["setPinMode", "digital", 8, "SERVO"],["setPinMode", "digital", 9, "SERVO"],["setPinMode", "digital", 10, "SERVO"],["setPinMode", "digital", 11, "SERVO"]'); 
+        var ret = cpf.setPinMode('["resetPin"],["setPinMode", "digital", 4, "SERVO"],["setPinMode", "digital", 5, "SERVO"],["setPinMode", "digital", 6, "SERVO"],["setPinMode", "digital", 7, "SERVO"],["setPinMode", "digital", 8, "SERVO"],["setPinMode", "digital", 9, "SERVO"],["setPinMode", "digital", 10, "SERVO"],["setPinMode", "digital", 11, "SERVO"]'); 
 }
-function myFunction1(){
-    document.getElementById("demo").innerHTML="開燈了！";
-    cpf.set("socket d4", 1);
-    cpf.request ('["digitalwrite", 4, 1]');
-    
-}
-function myFunction2(){
-    document.getElementById("demo").innerHTML="關燈了！";
-    cpf.set("socket d4", 0);
-    cpf.request ('["digitalwrite", 4, 0]');
-    
-}
+
 function myFunction3(){
     document.getElementById("demo").innerHTML="放下手";
     cpf.set("socket d10", 0);
@@ -67,4 +56,41 @@ function ButtonReleased(){
 function CancelEvent(e) {
 
   e.preventDefault();
+}
+function showValue(newValue,moto)
+{
+	switch (moto) {
+    case 1:
+        document.getElementById("range1").innerHTML=newValue;
+        cpf.set("socket d4", newValue);
+        break;
+    case 2:
+        document.getElementById("range2").innerHTML=newValue;
+        cpf.set("socket d5", newValue);
+        break;
+    case 3:
+        document.getElementById("range3").innerHTML=newValue;
+        cpf.set("socket d6", newValue);
+        break;
+    case 4:
+        document.getElementById("range4").innerHTML=newValue;
+        cpf.set("socket d7", newValue);
+        break;
+    case 5:
+        document.getElementById("range5").innerHTML=newValue;
+        cpf.set("socket d8", newValue);
+        break;
+    case 6:
+        document.getElementById("range6").innerHTML=newValue;
+        cpf.set("socket d9", newValue);
+        break;
+    case 7:
+        document.getElementById("range7").innerHTML=newValue;
+        cpf.set("socket d10", newValue);
+        break;
+    case 8:
+        document.getElementById("range8").innerHTML=newValue;
+        cpf.set("socket d11", newValue);
+        break;
+}
 }
