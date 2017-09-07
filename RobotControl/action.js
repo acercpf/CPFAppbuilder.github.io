@@ -13,16 +13,16 @@ function setup(){
 
 function myFunction3(){
     document.getElementById("demo").innerHTML="放下手";
-    cpf.set("socket d10", 0);
-    cpf.set("socket d11", 90);
-    cpf.request ('["servo_pos", 10, 0],["servo_pos", 11, 90]');
+    cpf.set("socket d8", 0);
+    cpf.set("socket d9", 90);
+    cpf.request ('["servo_pos", 8, 0],["servo_pos", 9, 90]');
     
 }
 function myFunction4(){
     document.getElementById("demo").innerHTML="舉起手";
-    cpf.set("socket d10", 90);
-    cpf.set("socket d11", 0);
-    cpf.request ('["servo_pos", 10, 90],["servo_pos", 11, 0]');
+    cpf.set("socket d8", 90);
+    cpf.set("socket d9", 0);
+    cpf.request ('["servo_pos", 8, 90],["servo_pos", 9, 0]');
     
 }
 function myFunction5(){
