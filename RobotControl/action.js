@@ -1,3 +1,11 @@
+/*
+RF=M4
+LF=M5
+RL=M6
+LL=M7
+RH=M8
+LH=M9
+*/
 function setup(){
     if(cpf)
         var ret = cpf.setPinMode('["resetPin"],["setPinMode", "digital", 4, "SERVO"],["setPinMode", "digital", 5, "SERVO"],["setPinMode", "digital", 6, "SERVO"],["setPinMode", "digital", 7, "SERVO"],["setPinMode", "digital", 8, "SERVO"],["setPinMode", "digital", 9, "SERVO"],["setPinMode", "digital", 10, "SERVO"],["setPinMode", "digital", 11, "SERVO"]'); 
@@ -45,18 +53,8 @@ function myFunction7(){
     cpf.request ('["servo_pos", 10, 0],["servo_pos", 11, 90],["servo_pos", 5, 60],["servo_pos", 6, 120]');
     
 }
-function ButtonPressed(){
-    cpf.set("socket d10", 180);
-    cpf.request ('["servo_pos", 10, 180]');
-}
-function ButtonReleased(){
-    cpf.set("socket d10", 0);
-    cpf.request ('["servo_pos", 10, 0]');
-}
-function CancelEvent(e) {
 
-  e.preventDefault();
-}
+
 function showValue(newValue,moto)
 {
 	switch (moto) {
