@@ -16,7 +16,6 @@ function myFunction3(){
     cpf.set("socket d8", 0);
     cpf.set("socket d9", 180);
     cpf.request ('["servo_pos", 8, 0],["servo_pos", 9, 180]');
-    
 }
 function myFunction4(){
     document.getElementById("demo").innerHTML="舉起手";
