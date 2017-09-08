@@ -14,15 +14,15 @@ function setup(){
 function myFunction3(){
     document.getElementById("demo").innerHTML="放下手";
     cpf.set("socket d8", 0);
-    cpf.set("socket d9", 90);
-    cpf.request ('["servo_pos", 8, 0],["servo_pos", 9, 90]');
+    cpf.set("socket d9", 180);
+    cpf.request ('["servo_pos", 8, 0],["servo_pos", 9, 180]');
     
 }
 function myFunction4(){
     document.getElementById("demo").innerHTML="舉起手";
-    cpf.set("socket d8", 90);
+    cpf.set("socket d8", 180);
     cpf.set("socket d9", 0);
-    cpf.request ('["servo_pos", 8, 90],["servo_pos", 9, 0]');
+    cpf.request ('["servo_pos", 8, 180],["servo_pos", 9, 0]');
     
 }
 function myFunction5(){
