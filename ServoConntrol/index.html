@@ -4,6 +4,23 @@
 <title>Servo Control</title>
 </head>
 <body>
+
+<ul class="mainmenu">
+        <li><a href="/" ><b><img src="images/tb01.png" /></b><span>校正</span></a></li>
+        <li><a href="/" ><b><img src="images/tb02.png" /></b><span>稍息</span></a></li>
+        <li><a href="/" ><b><img src="images/tb03.png" /></b><span>立正</span></a></li>
+        <li><a href="/" ><b><img src="images/tb04.png" /></b><span>揮雙手</span></a></li>
+        <li><a href="/" ><b><img src="images/tb05.png" /></b><span>揮左手</span></a></li>
+        <li><a href="/" ><b><img src="images/tb06.png" /></b><span>揮右手</span></a></li>
+        <li><a href="/" ><b><img src="images/tb06.png" /></b><span>甩雙腿</span></a></li>
+        <li><a href="/" ><b><img src="images/tb07.png" /></b><span>甩左腳</span></a></li>
+        <li><a href="/" ><b><img src="images/tb08.png" /></b><span>甩右腳</span></a></li>             <li><a href="/" ><b><img src="images/tb08.png" /></b><span>墊雙腳</span></a></li>
+        <li><a href="/" ><b><img src="images/tb08.png" /></b><span>墊左腳</span></a></li>
+        <li><a href="/" ><b><img src="images/tb08.png" /></b><span>墊右腳</span></a></li>
+        <li><a href="/" ><b><img src="images/tb08.png" /></b><span>前進</span></a></li>
+        <li><a href="/" ><b><img src="images/tb08.png" /></b><span>後退</span></a></li>
+        <li><a href="/" ><b><img src="images/tb08.png" /></b><span>波浪舞</span></a></li>
+    </ul>
 M1左腳(0-180)<input type="range" min="0" max="180" value="90" step="1" onchange="ServoSet1(this.value)" />
 <span id="rangeM1">90</span><br/><br/>
 M2右腳(0-180)<input type="range" min="0" max="180" value="90" step="1" onchange="ServoSet2(this.value)" />
@@ -51,6 +68,45 @@ M6右手(0-180)<input type="range" min="0" max="180" value="90" step="1" onchang
     setup();
      
 </script>
+<style type="text/css">  
+html, body { color:#222; font-family:Microsoft YaHei, Helvitica, Verdana, Tohoma, Arial, san-serif; margin:0; padding: 0; text-decoration: none; }
+    img { border:0; }
+    ul { list-style: none outside none; margin:0; padding: 0; }
+    body {
+        background-color:#eee; 
+    }
+    body .mainmenu:after { clear: both; content: " "; display: block; }
+
+    body .mainmenu li{ 
+        float:left;
+        margin-left: 2.5%;
+        margin-top: 2.5%;
+        width: 30%;  
+        border-radius:3px; 
+        overflow:hidden;
+    }
+
+    body .mainmenu li a{ display:block;  color:#FFF;   text-align:center }
+    body .mainmenu li a b{ 
+        display:block; height:80px;
+    }
+    body .mainmenu li a img{ 
+        margin: 15px auto 15px;
+        width: 50px;
+        height: 50px;
+    }
+
+    body .mainmenu li a span{ display:block; height:30px; line-height:30px;background-color:#FFF; color: #999; font-size:14px; }
+
+    body .mainmenu li:nth-child(8n+1) {background-color:#36A1DB}
+    body .mainmenu li:nth-child(8n+2) {background-color:#678ce1}
+    body .mainmenu li:nth-child(8n+3) {background-color:#8c67df}
+    body .mainmenu li:nth-child(8n+4) {background-color:#84d018}
+    body .mainmenu li:nth-child(8n+5) {background-color:#14c760}
+    body .mainmenu li:nth-child(8n+6) {background-color:#f3b613}
+    body .mainmenu li:nth-child(8n+7) {background-color:#ff8a4a}
+    body .mainmenu li:nth-child(8n+8) {background-color:#fc5366}  
+</style> 
 
 </html>
 
