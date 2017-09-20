@@ -18,7 +18,7 @@
     }
     function ServoSet1(newValue){
         document.getElementById("range").innerHTML=newValue;
-        cpf.request('["servo_pos", 4, newValue]');
+        cpf.request('["servo_pos", 4, '+newValue+']');
     }  
     setup();
      
