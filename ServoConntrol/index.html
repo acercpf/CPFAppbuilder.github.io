@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+
+<title>Servo Control</title>
+</head>
+<body>
+<input type="range" min="0" max="180" value="90" step="1" onchange="ServoSet1(this.value)" />
+<span id="range">90</span>
+
+
+</body>
+
+<script>
+	function setup(){
+		if(cpf)
+			var ret = cpf.setPinMode('["resetPin"],["setPinMode", "digital", 4, "SERVO"],["setPinMode", "digital", 5, "SERVO"],["setPinMode", "digital", 6, "SERVO"],["setPinMode", "digital", 7, "SERVO"],["setPinMode", "digital", 8, "SERVO"],["setPinMode", "digital", 9, "SERVO"]');		
+    }
+    function ServoSet1(newValue){
+        document.getElementById("range").innerHTML=newValue;
+        cpf.set("socket d4", newValue);
+    }   
+</script>
+
+</html>
+
