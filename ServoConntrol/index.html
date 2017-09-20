@@ -38,7 +38,9 @@ M6右手(0-180)<input type="range" min="0" max="180" value="90" step="1" onchang
 <script>
 
 	function myfunction(){
-    	alert("I am an alert box!!");
+        alert("行動代號：校正");
+        cpf.request('["servo_pos", 5, 0]');
+        cpf.request('["servo_pos", 5, 180]');
     }
     
 	function setup(){
