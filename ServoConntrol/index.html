@@ -18,9 +18,10 @@
     }
     function ServoSet1(newValue){
         document.getElementById("range").innerHTML=newValue;
-        cpf.set("socket d4", newValue);
+        cpf.request('["servo_pos", 4, newValue]');
     }  
-    setup(); 
+    setup();
+     
 </script>
 
 </html>
