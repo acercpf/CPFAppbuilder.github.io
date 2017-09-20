@@ -6,20 +6,20 @@
 <body>
 
 <ul class="mainmenu">
-        <li><a href="/" ><b><img src="images/tb01.png" /></b><span>校正</span></a></li>
-        <li><a href="/" ><b><img src="images/tb02.png" /></b><span>稍息</span></a></li>
-        <li><a href="/" ><b><img src="images/tb03.png" /></b><span>立正</span></a></li>
-        <li><a href="/" ><b><img src="images/tb04.png" /></b><span>揮雙手</span></a></li>
-        <li><a href="/" ><b><img src="images/tb05.png" /></b><span>揮左手</span></a></li>
-        <li><a href="/" ><b><img src="images/tb06.png" /></b><span>揮右手</span></a></li>
-        <li><a href="/" ><b><img src="images/tb06.png" /></b><span>甩雙腿</span></a></li>
-        <li><a href="/" ><b><img src="images/tb07.png" /></b><span>甩左腳</span></a></li>
-        <li><a href="/" ><b><img src="images/tb08.png" /></b><span>甩右腳</span></a></li>             <li><a href="/" ><b><img src="images/tb08.png" /></b><span>墊雙腳</span></a></li>
-        <li><a href="/" ><b><img src="images/tb08.png" /></b><span>墊左腳</span></a></li>
-        <li><a href="/" ><b><img src="images/tb08.png" /></b><span>墊右腳</span></a></li>
-        <li><a href="/" ><b><img src="images/tb08.png" /></b><span>前進</span></a></li>
-        <li><a href="/" ><b><img src="images/tb08.png" /></b><span>後退</span></a></li>
-        <li><a href="/" ><b><img src="images/tb08.png" /></b><span>波浪舞</span></a></li>
+        <li><a><b><img src="images/tb01.png" onclick="myfunction()" /></b><span>校正</sapn></a></li>
+        <li><a><b><img src="images/tb02.png" /></b><span>稍息</span></a></li>
+        <li><a><b><img src="images/tb03.png" /></b><span>立正</span></a></li>
+        <li><a><b><img src="images/tb04.png" /></b><span>揮雙手</span></a></li>
+        <li><a><b><img src="images/tb05.png" /></b><span>揮左手</span></a></li>
+        <li><a><b><img src="images/tb06.png" /></b><span>揮右手</span></a></li>
+        <li><a><b><img src="images/tb06.png" /></b><span>甩雙腿</span></a></li>
+        <li><a><b><img src="images/tb07.png" /></b><span>甩左腳</span></a></li>
+        <li><a><b><img src="images/tb08.png" /></b><span>甩右腳</span></a></li>             		 <li><a><b><img src="images/tb08.png" /></b><span>墊雙腳</span></a></li>
+        <li><a><b><img src="images/tb08.png" /></b><span>墊左腳</span></a></li>
+        <li><a><b><img src="images/tb08.png" /></b><span>墊右腳</span></a></li>
+        <li><a><b><img src="images/tb08.png" /></b><span>前進</span></a></li>
+        <li><a><b><img src="images/tb08.png" /></b><span>後退</span></a></li>
+        <li><a><b><img src="images/tb08.png" /></b><span>波浪舞</span></a></li>
     </ul>
 M1左腳(0-180)<input type="range" min="0" max="180" value="90" step="1" onchange="ServoSet1(this.value)" />
 <span id="rangeM1">90</span><br/><br/>
@@ -36,6 +36,10 @@ M6右手(0-180)<input type="range" min="0" max="180" value="90" step="1" onchang
 </body>
 
 <script>
+
+	function myfunction(){
+    	alert("I am an alert box!!");
+    }
     
 	function setup(){
 		if(cpf)
@@ -98,19 +102,21 @@ html, body { color:#222; font-family:Microsoft YaHei, Helvitica, Verdana, Tohoma
 
     body .mainmenu li a span{ display:block; height:30px; line-height:30px;background-color:#FFF; color: #999; font-size:14px; }
 
-    body .mainmenu li:nth-child(8n+1) {background-color:#36A1DB}
-    body .mainmenu li:nth-child(8n+2) {background-color:#678ce1}
-    body .mainmenu li:nth-child(8n+3) {background-color:#8c67df}
-    body .mainmenu li:nth-child(8n+4) {background-color:#84d018}
-    body .mainmenu li:nth-child(8n+5) {background-color:#14c760}
-    body .mainmenu li:nth-child(8n+6) {background-color:#f3b613}
-    body .mainmenu li:nth-child(8n+7) {background-color:#ff8a4a}
-    body .mainmenu li:nth-child(8n+8) {background-color:#fc5366}  
+    body .mainmenu li:nth-child(8n+1) {background-color:#DDFF77}
+    body .mainmenu li:nth-child(8n+2) {background-color:#CCFF33}
+    body .mainmenu li:nth-child(8n+3) {background-color:#BBFF00}
+    body .mainmenu li:nth-child(8n+4) {background-color:#77FFCC}
+    body .mainmenu li:nth-child(8n+5) {background-color:#33FFAA}
+    body .mainmenu li:nth-child(8n+6) {background-color:#00FF99}
+    body .mainmenu li:nth-child(8n+7) {background-color:#77DDFF}
+    body .mainmenu li:nth-child(8n+8) {background-color:#33CCFF}
+    body .mainmenu li:nth-child(8n+9) {background-color:#00BBFF}
+    body .mainmenu li:nth-child(8n+10) {background-color:#9F88FF} 
+    body .mainmenu li:nth-child(8n+11) {background-color:#7744FF} 
+    body .mainmenu li:nth-child(8n+12) {background-color:#5500FF} 
+    body .mainmenu li:nth-child(8n+13) {background-color:#FFBB66}
+    body .mainmenu li:nth-child(8n+14) {background-color:#FFAA33} 
+    body .mainmenu li:nth-child(8n+15) {background-color:#FF8800} 
 </style> 
 
 </html>
-
-
-
-
-
