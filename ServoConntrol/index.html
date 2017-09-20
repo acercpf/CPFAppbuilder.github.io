@@ -45,12 +45,12 @@ M6右手(0-180)<input type="range" min="0" max="180" value="90" step="1" onchang
 	function actionfunction(actionNum,alertMeg){
     	switch(actionNum) {
     		case 0:
-            cpf.request('["servo_pos",4, 90],["servo_pos",5, 150],["servo_pos",6, 50],["servo_pos",7, 150]');
-            	cpf.sleep(1000);
+                cpf.request('["servo_pos",4, 90],["servo_pos",5, 150],["servo_pos",6, 50],["servo_pos",7, 150]');
+            	cpf.sleep(500);
                 cpf.request('["servo_pos",4, 130],["servo_pos",5, 60],["servo_pos",6, 90],["servo_pos",7, 60]');
-            	cpf.sleep(1000);
+            	cpf.sleep(500);
             	cpf.request('["servo_pos",4, 130],["servo_pos",5, 150],["servo_pos",6, 90],["servo_pos",7, 150]');
-            	cpf.sleep(1000);
+            	cpf.sleep(500);
                 cpf.request('["servo_pos",4, 90],["servo_pos",5, 60],["servo_pos",6, 50],["servo_pos",7, 60]');
             	cpf.sleep(1000);
                 cpf.request('["servo_pos",4, 135],["servo_pos",5, 45],["servo_pos",6, 60],["servo_pos",7, 120],["servo_pos",8, 180],["servo_pos",9, 0]');
