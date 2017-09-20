@@ -4,6 +4,14 @@
 <title>Servo Control</title>
 </head>
 <body>
+<div class="switch1">
+馬達調整模式
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider"></span>
+</label>
+動作操作模式
+<div>
 
 <ul class="mainmenu">
         <li><a><b><img src="images/tb01.png" onclick="actionfunction(0,'校正')" /></b><span>0.校正</sapn></a></li>
@@ -201,6 +209,66 @@ html, body { color:#222; font-family:Microsoft YaHei, Helvitica, Verdana, Tohoma
     body .mainmenu li:nth-child(8n+13) {background-color:#FFBB66}
     body .mainmenu li:nth-child(8n+14) {background-color:#FFAA33} 
     body .mainmenu li:nth-child(8n+15) {background-color:#FF8800} 
+    
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+
+.switch input {display:none;}
+
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.slider.round {
+  border-radius: 100%;
+}
+
+.slider.round:before {
+  border-radius: 100%;
+}
+.switch1{
+	margin:0px auto;
+}
 </style> 
 
 </html>
