@@ -4,10 +4,18 @@
 <title>Servo Control</title>
 </head>
 <body>
-<input type="range" min="0" max="180" value="90" step="1" onchange="ServoSet1(this.value)" />
-<span id="range">90</span>
-
-
+M1左腳(0-180)<input type="range" min="0" max="180" value="90" step="1" onchange="ServoSet1(this.value)" />
+<span id="rangeM1">90</span><br/><br/>
+M2右腳(0-180)<input type="range" min="0" max="180" value="90" step="1" onchange="ServoSet2(this.value)" />
+<span id="rangeM2">90</span><br/><br/>
+M3左腿(0-180)<input type="range" min="0" max="180" value="90" step="1" onchange="ServoSet3(this.value)" />
+<span id="rangeM3">90</span><br/><br/>
+M4右腿(0-180)<input type="range" min="0" max="180" value="90" step="1" onchange="ServoSet4(this.value)" />
+<span id="rangeM4">90</span><br/><br/>
+M5左手(0-180)<input type="range" min="0" max="180" value="90" step="1" onchange="ServoSet5(this.value)" />
+<span id="rangeM5">90</span><br/><br/>
+M6右手(0-180)<input type="range" min="0" max="180" value="90" step="1" onchange="ServoSet6(this.value)" />
+<span id="rangeM6">90</span><br/><br/>
 </body>
 
 <script>
@@ -17,12 +25,36 @@
 			var ret = cpf.setPinMode('["resetPin"],["setPinMode", "digital", 4, "SERVO"],["setPinMode", "digital", 5, "SERVO"],["setPinMode", "digital", 6, "SERVO"],["setPinMode", "digital", 7, "SERVO"],["setPinMode", "digital", 8, "SERVO"],["setPinMode", "digital", 9, "SERVO"]');		
     }
     function ServoSet1(newValue){
-        document.getElementById("range").innerHTML=newValue;
+        document.getElementById("rangeM1").innerHTML=newValue;
         cpf.request('["servo_pos", 4, '+newValue+']');
+    }  
+    function ServoSet2(newValue){
+        document.getElementById("rangeM2").innerHTML=newValue;
+        cpf.request('["servo_pos", 5, '+newValue+']');
+    }
+    function ServoSet3(newValue){
+        document.getElementById("rangeM3").innerHTML=newValue;
+        cpf.request('["servo_pos", 6, '+newValue+']');
+    }   
+    function ServoSet4(newValue){
+        document.getElementById("rangeM4").innerHTML=newValue;
+        cpf.request('["servo_pos", 7, '+newValue+']');
+    } 
+    function ServoSet5(newValue){
+        document.getElementById("rangeM5").innerHTML=newValue;
+        cpf.request('["servo_pos", 8, '+newValue+']');
+    }
+    function ServoSet6(newValue){
+        document.getElementById("rangeM6").innerHTML=newValue;
+        cpf.request('["servo_pos", 9, '+newValue+']');
     }  
     setup();
      
 </script>
 
 </html>
+
+
+
+
 
